@@ -654,9 +654,9 @@ app.post('/api/login', async (req, res) => {
       return res.json({ status: 401, message: 'Incorrect password' });
     }
 
-    if (user.verified  === false) {
-      return res.json({ status: 400, message: 'Email not verified!' });
-    }
+    // if (user.verified  === false) {
+    //   return res.json({ status: 400, message: 'Email not verified!' });
+    // }
 
     // Generate JWT token with user ID and email
     const token = jwt.sign(
